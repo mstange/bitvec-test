@@ -1,7 +1,7 @@
 Run `cargo run --release -- 0x21000000` and check the contents of `target/release/bitvec-test` with a disassembler.
 
 ```asm
-                     __ZN11bitvec_test10extract_2417h87f34eef95a8a12dE:        // bitvec_test::extract_24::h87f34eef95a8a12d
+__ZN11bitvec_test10extract_2417h87f34eef95a8a12dE:        // bitvec_test::extract_24::h87f34eef95a8a12d
 0000000100001984         sub        sp, sp, #0x20                               ; End of try block started at 0x10000190c, CODE XREF=__ZN11bitvec_test4main17h5a0da1820dd45e67E+236
 0000000100001988         stp        x29, x30, [sp, #0x10]
 000000010000198c         add        x29, sp, #0x10
@@ -18,7 +18,10 @@ Run `cargo run --release -- 0x21000000` and check the contents of `target/releas
 00000001000019b8         add        sp, sp, #0x20
 00000001000019bc         ret
                         ; endp
+```
 
+```asm
+__ZN103_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$bitvec..slice..api..BitSliceIndex$LT$T$C$O$GT$$GT$5index17h6c965b5776c57107E:        // _$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$bitvec..slice..api..BitSliceIndex$LT$T$C$O$GT$$GT$::index::h6c965b5776c57107
 0000000100000f84         sub        sp, sp, #0x30                               ; CODE XREF=__ZN11bitvec_test10extract_2417h87f34eef95a8a12dE+40
 0000000100000f88         stp        x29, x30, [sp, #0x20]
 0000000100000f8c         add        x29, sp, #0x20
@@ -165,6 +168,10 @@ Run `cargo run --release -- 0x21000000` and check the contents of `target/releas
 000000010000114c         tbz        w0, 0x0, loc_10000112c
 
 0000000100001150         b          loc_1000010fc
+```
+
+```asm
+__ZN98_$LT$bitvec..slice..BitSlice$LT$T$C$bitvec..order..Msb0$GT$$u20$as$u20$bitvec..field..BitField$GT$7load_le17h550deac445cb8f32E:        // _$LT$bitvec..slice..BitSlice$LT$T$C$bitvec..order..Msb0$GT$$u20$as$u20$bitvec..field..BitField$GT$::load_le::h550deac445cb8f32
 
 00000001000012ac         sub        sp, sp, #0xd0                               ; CODE XREF=__ZN11bitvec_test10extract_2417h87f34eef95a8a12dE+44
 00000001000012b0         stp        x24, x23, [sp, #0x90]
